@@ -36,6 +36,7 @@ async def check_stream_status():
                 await channel.send(message)
             elif not output.get("streams"):
                 is_live = False
+                print("USER IS CURRENTLY OFFLINE")
 
         except Exception as e:
             print(f"Error checking stream status: {e}")
