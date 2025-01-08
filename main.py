@@ -2,9 +2,13 @@ import discord
 import subprocess
 import json
 import asyncio
+from dotenv import load_dotenv
+import os
 
-TOKEN = "MTMyNjU0OTkwNjI5ODYzODM1Nw.G-Akbv.k5PQiDGI-u4ITTotwAQ1nrnsphhdtkxC_UXEus"  # Replace with your bot's token
-TWITCH_USERNAME = "nadrath"  # Replace with the Twitch username to monitor
+load_dotenv()
+
+TOKEN = os.getenv("DISCORD_TOKEN")
+TWITCH_USERNAME = os.getenv("TWITCH_USERNAME")
 CHECK_INTERVAL = 60  # Check every 60 seconds
 
 intents = discord.Intents.default()
